@@ -6,7 +6,7 @@ const daysToChristmas = Math.round((xmas-today)/(1000*60*60*24))
 const days = document.getElementById('days')
 
 if (daysToChristmas == 0) {
-    days.textContent = "C'est noël !! Joyeux Noël !";
+    days.textContent = "Joyeux Noël à tous !!!";
 }
 
 if (daysToChristmas > 0) {
@@ -14,6 +14,6 @@ if (daysToChristmas > 0) {
 }
 
 if (daysToChristmas < 0) {
-    days.textContent = daysToChristmas + " jours depuis Noël !";
+    days.textContent = (-1 * daysToChristmas) + " jours depuis Noël !";
 }
 
