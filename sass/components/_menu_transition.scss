@@ -1,0 +1,30 @@
+$t: 1s;
+$s: 2em;
+
+* { margin: 0 }
+
+img {
+	position: absolute;
+	object-fit: cover;
+	z-index: 0;
+	width: 100vw; height: 100vh;
+	--r: 101%;
+	--mask: 
+		linear-gradient(red, red), 
+		radial-gradient(
+				red calc(var(--r) - 1px), 
+				transparent var(--r))
+			50%/ #{$s $s};
+	-webkit-mask: var(--mask);
+					mask: var(--mask);
+	-webkit-mask-composite: xor;
+					mask-composite: exclude;
+	animation: 
+		lyr 2*$t steps(1) 1, 
+		r 2*$t ease-out 1;
+	animation-delay: calc(var(--i)*#{-$t})
+}
+
+@keyframes lyr { 50% { z-index: 1 } }
+
+@keyframes r { 0%, 50% { --r: 0% } }

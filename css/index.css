@@ -57,9 +57,27 @@ html, body {
 }
 @media screen and (max-width: 576px) {
   .button {
-    padding: 15px 25px;
+    padding: 15px 30px;
     font-size: 20px;
   }
+}
+.button.return {
+  padding: 5px 60px;
+  font-size: 20px;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.35), inset 1px 1px 0px rgba(255, 255, 255, 0.25), inset 0 0 6px #12313b, inset 0 80px 80px -40px #000822, 1px 1px 3px rgba(0, 0, 0, 0.75);
+  /* shadow */
+  background: #1D2D61;
+  border: 1px solid #000822;
+}
+.button.return:hover {
+  background: #000822;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75), 0 0 40px #FFF;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.35), inset 1px 1px 0px rgba(255, 255, 255, 0.25), inset 0 0 6px #0028AD, inset 0 80px 80px -40px #1D2D61, 1px 1px 3px rgba(0, 0, 0, 0.75);
+  /* shadow */
+}
+.button.return:active {
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.35), inset 1px 1px 0px rgba(255, 255, 255, 0.25), inset 0 0 6px #0028AD, inset 0 80px 80px -40px #1D2D61, 1px 1px 3px rgba(0, 0, 0, 0.75);
+  /* shadow */
 }
 
 .button::before {
@@ -93,6 +111,7 @@ html, body {
 
 #days {
   font-size: 48px;
+  margin-top: 5%;
 }
 @media screen and (max-width: 576px) {
   #days {
@@ -101,7 +120,7 @@ html, body {
 }
 
 h1.animated-title {
-  padding: 0 10%;
+  padding: 0 10% 5%;
   font-size: 75px;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
@@ -113,6 +132,7 @@ h1.animated-title {
 @media screen and (max-width: 576px) {
   h1.animated-title {
     font-size: 42px;
+    padding: 10%;
   }
 }
 
@@ -246,10 +266,6 @@ h1.animated-title {
           backface-visibility: visible;
   -webkit-animation-name: flip;
           animation-name: flip;
-}
-
-body {
-  background: #000;
 }
 
 .lightrope {
@@ -397,9 +413,113 @@ body {
     box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
   }
 }
-body.menu-body {
-  background-image: url(../assets/images/Christmas-bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+* {
+  margin: 0;
+}
+
+img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  --r: 101%;
+  --mask:
+  	linear-gradient(red, red),
+  	radial-gradient(
+  			red calc(var(--r) - 1px),
+  			transparent var(--r))
+  		50%/ 2em 2em;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-animation: lyr 2s steps(1) 1, r 2s ease-out 1;
+          animation: lyr 2s steps(1) 1, r 2s ease-out 1;
+  -webkit-animation-delay: calc(var(--i)*-1s);
+          animation-delay: calc(var(--i)*-1s);
+}
+
+@-webkit-keyframes lyr {
+  50% {
+    z-index: 1;
+  }
+}
+
+@keyframes lyr {
+  50% {
+    z-index: 1;
+  }
+}
+@-webkit-keyframes r {
+  0%, 50% {
+    --r: 0% ;
+  }
+}
+@keyframes r {
+  0%, 50% {
+    --r: 0% ;
+  }
+}
+body {
+  background-color: #151522;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  width: 90%;
+  height: 90%;
+  visibility: hidden;
+}
+
+.sparkle {
+  /* mix-blend-mode:luminosity */
+}
+
+body {
+  background: radial-gradient(at top, #12313b, #000822);
+}
+
+canvas {
+  position: absolute;
+}
+
+.menu {
+  width: 80%;
+  max-width: 600px;
+  height: 90vh;
+  background-color: #FEFEFE;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.35);
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: url(../assets/images/christmas-bg.jpg) center/cover no-repeat;
+}
+.menu h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #BF9113;
+}
+.menu h2 {
+  font-size: 32px;
+}
+.menu p {
+  font-size: 24px;
 }/*# sourceMappingURL=index.css.map */

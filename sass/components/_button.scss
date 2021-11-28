@@ -30,8 +30,39 @@
 	     -o-transition: 500ms linear;
 					transition: 500ms linear;
 	@media screen and (max-width: 576px) {
-		padding: 15px 25px;
+		padding: 15px 30px;
 		font-size: 20px;
+	}
+	&.return {
+		padding: 5px 60px;
+		font-size: 20px;
+		box-shadow:
+		0 -3px 10px rgba(black, .35),
+		inset 1px 1px 0px rgba(255,255,255,0.25), /* highlight */
+		inset 0 0 6px #12313b, /* inner glow */
+		inset 0 80px 80px -40px #000822, /* gradient */
+		1px 1px 3px rgba(0,0,0,0.75); /* shadow */
+		background: #1D2D61;
+		border: 1px solid #000822;
+		&:hover {
+			background: #000822;
+			text-shadow: 0 1px 2px rgba(0,0,0,0.75), 0 0 40px #FFF;
+			box-shadow:
+			0 -3px 10px rgba(black, .35),
+				inset 1px 1px 0px rgba(255,255,255,0.25), /* highlight */
+				inset 0 0 6px #0028AD, /* inner glow */
+				inset 0 80px 80px -40px #1D2D61, /* gradient */
+				1px 1px 3px rgba(0,0,0,0.75); /* shadow */
+				
+		}
+		&:active {
+			box-shadow:
+			0 -3px 10px rgba(black, .35),
+			inset 1px 1px 0px rgba(255,255,255,0.25), /* highlight */
+			inset 0 0 6px #0028AD, /* inner glow */
+			inset 0 80px 80px -40px #1D2D61, /* gradient */
+			1px 1px 3px rgba(0,0,0,0.75); /* shadow */
+		}
 	}
 }
 

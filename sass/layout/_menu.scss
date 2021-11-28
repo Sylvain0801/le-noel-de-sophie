@@ -1,6 +1,27 @@
-body.menu-body {
-    background-image: url(../assets/images/Christmas-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.menu {
+    width: 80%;
+    max-width: 600px;
+    height: 90vh;
+    background-color: #FEFEFE;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px 3px rgba(white, .35);
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: url(../assets/images/christmas-bg.jpg) center/cover no-repeat;
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        color: #BF9113;
+    }
+    h2 {
+        font-size: 32px;
+    } 
+    p {
+        font-size: 24px;
+    }
 }
