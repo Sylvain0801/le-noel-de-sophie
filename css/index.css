@@ -164,6 +164,8 @@ h1.animated-title {
           animation-name: pulse;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes rubberBand {
@@ -470,22 +472,10 @@ body {
   justify-content: center;
 }
 
-body,
-html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 svg {
   width: 90%;
   height: 90%;
   visibility: hidden;
-}
-
-.sparkle {
-  /* mix-blend-mode:luminosity */
 }
 
 body {
@@ -496,11 +486,14 @@ canvas {
   position: absolute;
 }
 
+.menu-body {
+  overflow: initial;
+}
+
 .menu {
   width: 80%;
   max-width: 600px;
-  height: 80vh;
-  background-color: #FEFEFE;
+  height: 70vh;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.35);
@@ -523,6 +516,12 @@ canvas {
 }
 .menu p {
   font-size: 24px;
+  margin: 0 20%;
+}
+@media screen and (max-width: 576px) {
+  .menu p {
+    margin: 0;
+  }
 }
 .menu img.qr-code {
   -o-object-fit: initial;
