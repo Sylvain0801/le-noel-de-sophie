@@ -499,7 +499,7 @@ canvas {
 .menu {
   width: 80%;
   max-width: 600px;
-  height: 90vh;
+  height: 80vh;
   background-color: #FEFEFE;
   border-radius: 10px;
   padding: 20px;
@@ -524,7 +524,7 @@ canvas {
 .menu p {
   font-size: 24px;
 }
-.menu img.QR-Code {
+.menu img.qr-code {
   -o-object-fit: initial;
      object-fit: initial;
   -webkit-animation: none;
