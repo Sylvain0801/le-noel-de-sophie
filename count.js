@@ -10,7 +10,7 @@ if (daysToChristmas == 0) {
 }
 
 if (daysToChristmas > 0) {
-    days.textContent = "Il reste "+ daysToChristmas + " avant Noël.";
+    days.textContent = "Il reste "+ daysToChristmas + " jours avant Noël.";
 }
 
 if (daysToChristmas < 0) {
