@@ -1,15 +1,20 @@
 .menu-body {
     overflow: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: initial;
 }
 .menu {
     width: 80%;
     max-width: 600px;
     height: 70vh;
+    margin-top: 120px;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px 3px rgba(white, .35);
     color: black;
-    position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -31,14 +36,13 @@
             margin: 0;
         }
     }
-    img.qr-code {
-        object-fit: initial;
-	    animation: none;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        width: 50px;
-        height: 50px;
-        mask: initial;
-    }
+}
+img.qr-code {
+    object-fit: initial;
+    animation: none;
+    width: 80px;
+    height: 80px;
+    mask: initial;
+    position: initial;
+    margin: 20px;
 }

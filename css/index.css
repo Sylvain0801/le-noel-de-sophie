@@ -465,20 +465,6 @@ img {
   }
 }
 body {
-  background-color: #151522;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-svg {
-  width: 90%;
-  height: 90%;
-  visibility: hidden;
-}
-
-body {
   background: radial-gradient(at top, #12313b, #000822);
 }
 
@@ -488,17 +474,22 @@ canvas {
 
 .menu-body {
   overflow: initial;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: initial;
 }
 
 .menu {
   width: 80%;
   max-width: 600px;
   height: 70vh;
+  margin-top: 120px;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.35);
   color: black;
-  position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -523,16 +514,16 @@ canvas {
     margin: 0;
   }
 }
-.menu img.qr-code {
+
+img.qr-code {
   -o-object-fit: initial;
      object-fit: initial;
   -webkit-animation: none;
           animation: none;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   -webkit-mask: initial;
           mask: initial;
+  position: initial;
+  margin: 20px;
 }/*# sourceMappingURL=index.css.map */
