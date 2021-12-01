@@ -1,5 +1,11 @@
-body {
+body.menu-body {
   background: radial-gradient(at top, #12313b, #000822);
+  overflow: initial;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: initial;
 }
 
 canvas {
