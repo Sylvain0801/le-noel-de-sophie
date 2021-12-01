@@ -1,19 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 /* other styles */
-html, body {
-  width: 100%;
-  height: 100%;
+body {
   margin: 0;
-  overflow: hidden;
   font-family: "Clicker Script", cursive;
   color: white;
 }
 
 .bg {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
   display: table;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNkMzU0NDgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNGExMTBjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   /* FF3.6+ */
   /* Chrome,Safari4+ */
   /* Chrome10+,Safari5.1+ */
@@ -414,63 +413,13 @@ h1.animated-title {
     box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
   }
 }
-* {
-  margin: 0;
-}
-
-img {
-  position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 0;
-  width: 100vw;
-  height: 100vh;
-  --r: 101%;
-  --mask:
-  	linear-gradient(red, red),
-  	radial-gradient(
-  			red calc(var(--r) - 1px),
-  			transparent var(--r))
-  		50%/ 2em 2em;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  -webkit-animation: lyr 2s steps(1) 1, r 2s ease-out 1;
-          animation: lyr 2s steps(1) 1, r 2s ease-out 1;
-  -webkit-animation-delay: calc(var(--i)*-1s);
-          animation-delay: calc(var(--i)*-1s);
-}
-
-@-webkit-keyframes lyr {
-  50% {
-    z-index: 1;
-  }
-}
-
-@keyframes lyr {
-  50% {
-    z-index: 1;
-  }
-}
-@-webkit-keyframes r {
-  0%, 50% {
-    --r: 0% ;
-  }
-}
-@keyframes r {
-  0%, 50% {
-    --r: 0% ;
-  }
-}
 body.menu-body {
   background: radial-gradient(at top, #12313b, #000822);
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: initial;
 }
 
 canvas {
@@ -480,8 +429,6 @@ canvas {
 .menu {
   width: 80%;
   max-width: 600px;
-  height: 70vh;
-  margin-top: 120px;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.35);
@@ -491,6 +438,7 @@ canvas {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-top: 30px;
   background: url(../assets/images/christmas-bg.jpg) center/cover no-repeat;
 }
 .menu h1 {
@@ -512,14 +460,7 @@ canvas {
 }
 
 img.qr-code {
-  -o-object-fit: initial;
-     object-fit: initial;
-  -webkit-animation: none;
-          animation: none;
   width: 80px;
   height: 80px;
-  -webkit-mask: initial;
-          mask: initial;
-  position: initial;
   margin: 20px;
 }/*# sourceMappingURL=index.css.map */

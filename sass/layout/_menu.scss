@@ -2,8 +2,6 @@
 .menu {
     width: 80%;
     max-width: 600px;
-    height: 70vh;
-    margin-top: 120px;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px 3px rgba(white, .35);
@@ -13,6 +11,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin-top: 30px;
     background: url(../assets/images/christmas-bg.jpg) center/cover no-repeat;
     h1 {
         text-align: center;
@@ -31,11 +30,11 @@
     }
 }
 img.qr-code {
-    object-fit: initial;
-    animation: none;
+    // object-fit: initial;
+    // animation: none;
     width: 80px;
     height: 80px;
-    mask: initial;
-    position: initial;
+    // mask: initial;
+    // position: initial;
     margin: 20px;
 }

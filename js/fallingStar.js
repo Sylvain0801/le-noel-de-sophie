@@ -142,7 +142,7 @@
 
   function resizeViewport() {
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = document.body.clientHeight;
   }
 
   function mouseMove(e) {
