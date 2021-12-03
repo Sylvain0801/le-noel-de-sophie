@@ -14,7 +14,7 @@
 
   var canvas = document.querySelector('canvas');
   var cx = canvas.getContext('2d');
-  canvas.style.backgroundColor = '#000822';
+  // canvas.style.backgroundColor = '#000822';
   resizeViewport();
 
   function Star() {
