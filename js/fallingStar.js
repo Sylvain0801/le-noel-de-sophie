@@ -5,16 +5,16 @@
     falling_star;
 
   var R = Math.PI / 5;
-  var G = 1.3;
-  var TOTAL = 25;
-  var SIZE = 3.5;
+  var G = 1.2;
+  var TOTAL = 35;
+  var SIZE = 3.8;
   var CURVE = 0.25;
-  var ENERGY = 0.01;
-  var FALLING_CHANCE = 0.2;
+  var ENERGY = 0.02;
+  var FALLING_CHANCE = 0.1;
 
   var canvas = document.querySelector('canvas');
   var cx = canvas.getContext('2d');
-  //canvas.style.backgroundColor = '#000822';
+  canvas.style.backgroundColor = '#000822';
   resizeViewport();
 
   function Star() {
@@ -31,7 +31,6 @@
   function FallingStar() {
     Star.call(this);
     this.y = Math.random() * canvas.height / 2;
-    this.r = Math.random() * SIZE * SIZE + SIZE * 3;
     this.falling = false;
   }
 
@@ -58,7 +57,7 @@
   }
 
   Star.prototype.shine = function() {
-    this.d ? this.e -= ENERGY * this.r/50 : this.e += ENERGY;
+    this.d ? this.e -= ENERGY : this.e += ENERGY;
     if (this.e > 1 - ENERGY && this.d === false) {
       this.d = true;
     }
@@ -76,7 +75,7 @@
   };
 
   FallingStar.prototype.shine = function() {
-    this.d ? this.e -= ENERGY * this.r/25  : this.e += ENERGY * 5;
+    this.d ? this.e -= ENERGY * 0.2 : this.e += ENERGY * 5;
     if (this.e > 1 - ENERGY && this.d === false) {
       this.d = true;
     }
@@ -124,8 +123,8 @@
     if (regular_stars.length < TOTAL) regular_stars.push(new Star);
     for (var i = 0; i < regular_stars.length; i++) {
       regular_stars[i].shine();
-      if (regular_stars[i].d === true && regular_stars[i].e < 0) {
-        regular_stars.splice(i, 1);
+      if (regular_stars[i].d === true && regular_stars[i].e < ENERGY) {
+        regular_stars.splice(regular_stars[i], 1);
       }
     }
     if (!falling_star && FALLING_CHANCE > Math.random()) {
@@ -147,7 +146,7 @@
 
   function mouseMove(e) {
     if (falling_star) {
-      if (e.clientX > falling_star.x - 2 * falling_star.r && e.clientX < falling_star.x + 2 * falling_star.r && e.clientY > falling_star.y - 2 * falling_star.r && e.clientY < falling_star.y + 2 * falling_star.r) {
+      if (e.clientX > falling_star.x - falling_star.r && e.clientX < falling_star.x + falling_star.r && e.clientY > falling_star.y - falling_star.r && e.clientY < falling_star.y + falling_star.r) {
         if (!falling_star.falling) {
           falling_star.falling = true;
           falling_star.e = 1;

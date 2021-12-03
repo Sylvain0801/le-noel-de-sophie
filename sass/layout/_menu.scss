@@ -1,4 +1,7 @@
-
+i.bi.bi-stars {
+    font-size: 32px;
+    color: $light-yellow;
+}
 .menu {
     width: 80%;
     max-width: 600px;
@@ -12,21 +15,28 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
-    background: url(../assets/images/christmas-bg.jpg) center/cover no-repeat;
+    background: url(../assets/images/christmas-bg-2.jpg) center/cover no-repeat;
+    text-shadow: 0 0 10px black;
     h1 {
         text-align: center;
-        font-size: 50px;
-        color: #BF9113;
+        font-size: 60px;
+        color: $light-yellow;
     }
     h2 {
         font-size: 32px;
+        margin-bottom: 5px;
+        color: $light-yellow;
     } 
     p {
         font-size: 24px;
         margin: 0 20%;
+        color: #FFF08E;
         @media screen and (max-width: 576px) {
             margin: 0;
         }
+        // &:nth-child(even) {
+        //     color: $green;
+        // }
     }
 }
 img.qr-code {
