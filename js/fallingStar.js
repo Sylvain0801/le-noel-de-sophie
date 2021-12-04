@@ -82,9 +82,9 @@
     setShape({
       o: this
     });
-    cx.strokeStyle = "rgba(221, 19, 255, " + this.e * 2 + ")";
-    cx.shadowColor = "rgba(221, 19, 255, " + this.e * 2 + ")";
-    cx.fillStyle = "rgba(221, 19, 255, " + this.e * 2 + ")";
+    cx.strokeStyle = "rgba(199, 2, 12, " + this.e * 2 + ")";
+    cx.shadowColor = "rgba(199, 2, 12, " + this.e * 2 + ")";
+    cx.fillStyle = "rgba(199, 2, 12, " + this.e * 2 + ")";
     cx.lineWidth = this.c * 2;
     cx.shadowBlur = 50;
     cx.shadowOffsetX = 0;

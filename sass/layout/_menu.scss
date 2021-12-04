@@ -1,10 +1,11 @@
-i.bi.bi-stars {
+i.bi.bi-stars, i.bi.bi-gift-fill {
     font-size: 32px;
-    color: $light-yellow;
+    color: $red;
+    margin-top: 10px;
 }
 .menu {
     width: 80%;
-    max-width: 600px;
+    max-width: 650px;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px 3px rgba(white, .35);
@@ -20,23 +21,22 @@ i.bi.bi-stars {
     h1 {
         text-align: center;
         font-size: 60px;
-        color: $light-yellow;
+        color: $red;
+        margin-top: 0;
+        line-height: 1;
     }
     h2 {
-        font-size: 32px;
-        margin-bottom: 5px;
+        font-size: 40px;
+        margin: 0;
         color: $light-yellow;
     } 
     p {
-        font-size: 24px;
+        font-size: 18px;
         margin: 0 20%;
         color: #FFF08E;
         @media screen and (max-width: 576px) {
             margin: 0;
         }
-        // &:nth-child(even) {
-        //     color: $green;
-        // }
     }
 }
 img.qr-code {
